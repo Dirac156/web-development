@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    margin: 0;
+}
+header {
+    background-color: #70af85;
+    margin: 0;
+}
+h1 {
+    font-family: 'Yellowtail', cursive;
+}
+
+h2 {
+    font-family: 'Redressed', cursive;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+.cloud-img {
+    position: absolute;
+    
+}
+
+.cloud-img-top {
+    position: relative;
+    left: 220px;
+    top: 20px;
+}
+
