@@ -9,12 +9,15 @@ h3 {
 .remove-padding{
     margin-left: 0;
     padding-left: 0;
+    padding-right: 0;
 }
 
 /* Title section */
 
+
 #title {
     background-image: url(../images/desktop/image-hero.jpg);
+    /* background: transparent; */
     background-size: cover;
     background-position: center;
     padding: 2% 13%;
@@ -22,6 +25,15 @@ h3 {
     font-family: 'Montserrat', sans-serif;
     height: 600px;
 }
+
+
+.navbar-toggler i{
+    border: 2px solid white;
+    color: white;
+    border-radius: 5px;
+    padding: 25% 40% 25% 35%;
+}
+
 
 .navbar-brand {
     font-size: 2rem;
@@ -54,7 +66,7 @@ h3 {
 .title-heading {
     border: 1px solid white;
     margin-top: 25%;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 250;
     padding: 3%;
 }
@@ -148,3 +160,4 @@ footer li:hover {
 }
 
 /* footer navbar */
+
