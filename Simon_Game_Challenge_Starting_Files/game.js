@@ -1,11 +1,12 @@
-$(document).ready(function(){
-    console.log("I there");
-});
 
 //game pattern
 var gamePattern = [];
 
 var userClickedPattern = [];
+
+var keyP = true;
+
+var level = 0;
 
 $(".btn").click(function(){
     //get user clicked button
@@ -16,7 +17,36 @@ $(".btn").click(function(){
     console.log(userClickedPattern);
 
     playSound(userChosenColour);
+    animatePress(userChosenColour);
+    checkAnswer(userClickedPattern.length-1);
 });
+
+function startOver(){
+    keyP = true;
+    level = 0;
+    gamePattern = [];
+}
+
+function checkAnswer(currentLevel) { 
+    if (userClickedPattern[currentLevel] === gamePattern[currentLevel]){
+        console.log("success");
+
+        if (userClickedPattern.length === gamePattern.length){
+            setTimeout(function(){
+                nextSequence();
+            }, 1000);
+        }
+    } else {
+        console.log("wrong");
+        playSound("wrong");
+        $("body").addClass("game-over");
+        setTimeout(function() {
+            $("body").removeClass("game-over");
+        }, 200);
+        $("#level-title").html("Game Over, Press Any Key to Restart");
+        startOver();
+    };
+}
 
 //color array
 var buttonColours = ["red", "blue", "green", "yellow"];
@@ -25,6 +55,12 @@ var buttonColours = ["red", "blue", "green", "yellow"];
 function nextSequence() {
     var randomNumber = Math.floor(Math.random() * 4)
     var randomChosenColour = buttonColours[randomNumber];
+
+    //increment level
+    level++;
+    $("#level-title").html("level " + level);
+    //reset user clicked pattern to empty
+    userClickedPattern = [];
 
     gamePattern.push(randomChosenColour);
     //color selected
@@ -44,4 +80,20 @@ function playSound(color) {
     var sound_play = new Audio(path);
     sound_play.play();
 }
-nextSequence();
+
+function animatePress(currentColor){
+    $("#" + currentColor).addClass("pressed");
+
+    setTimeout(function(){
+        $("#" + currentColor).removeClass("pressed");
+    }, 100);
+}
+
+
+$(document).keydown(function () {
+    if (keyP){
+        nextSequence();
+        keyP = false;
+    };
+    
+});

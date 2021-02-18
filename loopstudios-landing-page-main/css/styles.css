@@ -6,11 +6,15 @@ h3 {
     font-size: 1.5rem;
 }
 
-.remove-padding{
-    margin-left: 0;
+.remove-padding {
     padding-left: 0;
     padding-right: 0;
 }
+
+/* Navbar not push content */
+
+
+
 
 /* Title section */
 
@@ -27,7 +31,7 @@ h3 {
 }
 
 
-.navbar-toggler i{
+.navbar-toggler i {
     border: 2px solid white;
     color: white;
     border-radius: 5px;
@@ -100,7 +104,7 @@ h3 {
     margin-bottom: 5%;
 }
 
-.creation-header .btn{
+.creation-header .btn {
     text-align: center;
     margin-left: 45%;
 }
@@ -161,3 +165,121 @@ footer li:hover {
 
 /* footer navbar */
 
+
+
+
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width : 480px) {
+    /* Styles */
+    .midle-image{
+        position: static;
+    }
+    .midle-text{
+        position: static;
+    }
+
+    .nav-fix {
+        position: absolute;
+        z-index: 1;
+        top: 5px;
+    }
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+    /* Styles */
+    .midle-image{
+        position: static;
+    }
+    .midle-text{
+        position: static;
+        margin-top: 25%;
+    }
+
+    .nav-fix {
+        position: absolute;
+        z-index: 1;
+        top: 5px;
+    }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+    /* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+    /* Styles */
+    .midle-image{
+        position: static;
+    }
+    .midle-text{
+        position: static;
+        margin-top: 25%;
+    }
+    .title-heading {
+        border: 1px solid white;
+        margin-top: 25%;
+    }
+    .nav-fix {
+        position: static;
+    }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+    /* Styles */
+    .midle-image{
+        position: static;
+    }
+    .midle-text{
+        position: static;
+    }
+    .title-heading {
+        border: 1px solid white;
+        margin-top: 25%;
+    }
+
+    .nav-fix {
+        position: static;
+    }
+}
+
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+    /* Styles */
+    .midle-image{
+        position: static;
+    }
+    .midle-text{
+        position: absolute;
+    }
+    .nav-fix {
+        position: static;
+    }
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+    /* Styles */
+    .midle-image{
+        position: static;
+    }
+    .midle-text{
+        position: absolute;
+    }
+    .nav-fix {
+        position: static;
+    }
+}
